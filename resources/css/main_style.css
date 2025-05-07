@@ -38,13 +38,29 @@
 
 @keyframes second_page_text {
   0% {
-    width: 0%;
     opacity: 0;
+    transform: translateY(100%);
   }
 
   100% {
-    width: 100%;
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fourth_page_text {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  70% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -132,7 +148,7 @@ body {
 
   .first_page  .first_page_content_box h2.first_page_title {
     color:#fff;
-    font-size:3rem;
+    font-size:5rem;
     font-weight:bold;
     transition:all .5;
   }
@@ -160,10 +176,10 @@ body {
   }
 
   .second_page .second_page_content_box .second_page_content_left_box {
-    width: 40%;
+    width: 50%;
     display:flex;
     overflow:hidden;
-    padding:20px;
+    padding:50px;
     box-sizing: border-box;
   }
 
@@ -193,16 +209,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding:0px 50px;
+    padding:50px;
     box-sizing: border-box;
+    position:relative;
+  }
+
+  .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
+    position:absolute;
+    right:50px;
+    bottom:50px;
+    width: 300px;
+    height: 300px;
+    opacity: .3;
   }
 
   .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
     font-size:5rem;
-    background: linear-gradient(90deg, #94bdff, #4242ff);
+    /* background: linear-gradient(90deg, #94bdff, #4242ff);
     background-clip:text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color:#000;
     text-align: left;
     font-weight: bold;
     display:block;
@@ -218,7 +245,7 @@ body {
     font-size:2rem;
     font-weight: 400;
     line-height: 2rem;
-    margin-top:30px;
+    margin-top:40px;
     text-align: left;
     width: 100%;
     transition:all .5s;
@@ -241,14 +268,14 @@ body {
     left:0;
     width: 100%;
     height: 100%;
-    background-image:url(../images/pages/second_page_bg2.jpg);
+    background-image:url(../images/pages/fourth_page_bg2.jpg);
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
     z-index:0;
   }
 
-  .fourth_page.visited_page {
+  .fourth_page.visited_page .fourth_page_bg {
     animation: fourth_page_bg_animation 2s ease-in-out forwards;
   }
 
@@ -266,6 +293,11 @@ body {
     border-radius: 10px;
     position:relative;
     z-index:2;
+    opacity: 0;
+  }
+
+  .fourth_page.visited_page .fourth_page_content_container .fourth_page_content_box {
+    animation: fourth_page_text 2s ease-in-out .5s forwards;
   }
 
   .fourth_page .fourth_page_content_box .fourth_page_content_box_bg {
@@ -275,7 +307,6 @@ body {
     width: 100%;
     height: 100%;
     z-index:0;
-    background-color: #fff;
     opacity: 1;
     border-radius: 20px;
   }
@@ -284,8 +315,8 @@ body {
     font-size:5rem;
     text-align: center;
     font-weight: bold;
-    color:#002244;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    color:#fff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255,0.4);
     z-index:2;
     position:relative;
     font-family: "Noto Sans KR", sans-serif;
@@ -295,10 +326,11 @@ body {
 
   .fourth_page .fourth_page_content_box p.fourth_page_subtitle {
     margin-top:70px;
-    font-size:2rem;
+    font-size:2.5rem;
+    font-weight:bold;
     text-align:center;
     z-index:2;
-    color:#002244;
+    color:#fff;
     position:relative;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
@@ -313,12 +345,27 @@ body {
       text-align: center;
     }
 
+    .second_page .second_page_content_box .second_page_content_left_box {
+      padding: 30px 20px;
+    }
+
+    .second_page .second_page_content_box .second_page_content_right_box {
+      padding:30px 10px;
+    }
+
+    .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
+      width: 250px;
+      height: 250px;
+      right:10px;
+      bottom:30px;
+    }
+
     .first_page  .first_page_content_box h2.first_page_title {
-      font-size:2.5rem;
+      font-size:4rem;
     }
 
     .first_page  .first_page_content_box p.first_page_subtitle {
-      font-size:1.5rem;
+      font-size:2rem;
     }
 
     .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
@@ -341,11 +388,11 @@ body {
 
   @media all and (max-width:768px){
     .first_page  .first_page_content_box h2.first_page_title {
-      font-size:2rem;
+      font-size:3rem;
     }
 
     .first_page  .first_page_content_box p.first_page_subtitle {
-      font-size:1.2rem;
+      font-size:1.6rem;
     }
 
     .second_page .second_page_content_box {
@@ -355,27 +402,43 @@ body {
     .second_page .second_page_content_box .second_page_content_left_box {
       width: 100%;
       height: 50%;
+      padding: 20px;
     }
 
     .second_page .second_page_content_box .second_page_content_right_box {
       width: 100%;
       height: 50%;
+      padding:20px;
     }
 
+    .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
+      width: 200px;
+      height: 200px;
+      right:10px;
+      bottom:10px;
+    }
+
+
     .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
-      font-size:2.5rem;
+      font-size:3rem;
     }
 
     .second_page .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
-      font-size:1rem;
-      line-height: 1rem;
+      font-size:1.6rem;
+      line-height: 1.6rem;
+    }
+
+    .fourth_page .fourth_page_content_container .fourth_page_content_box {
+      padding: 0;
+      width: 70%;
     }
 
     .fourth_page .fourth_page_content_box h2.fourth_page_title {
-      font-size:2.5rem;
+      width: 100%;
+      font-size:3rem;
     }
   
     .fourth_page .fourth_page_content_box p.fourth_page_subtitle {
-      font-size:1rem;
+      font-size:1.6rem;
     }
   }
