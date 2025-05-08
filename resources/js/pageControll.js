@@ -47,7 +47,7 @@ window.addEventListener("wheel", (e) => {
     return;
   }
 
-  if (current === 1) {
+  if ((current === 1) | (current === 7)) {
     header.classList.add("black_theme");
   } else {
     header.classList.remove("black_theme");
@@ -72,7 +72,7 @@ for (let i = 0; i < menu_item_list.length; i++) {
       return;
     }
 
-    if (current === 1) {
+    if ((current === 1) | (current === 7)) {
       header.classList.add("black_theme");
     } else {
       header.classList.remove("black_theme");
