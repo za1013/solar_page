@@ -337,6 +337,66 @@ body {
     transition:all .5s;
   }
 
+  .fifth_page {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fifth_page .fifth_page_bg_box {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    overflow:hidden;
+    width: 100%;
+    height: 100%;
+    display:flex;
+  }
+
+  .fifth_page .fifth_page_bg_box .fifth_page_bg_img {
+    flex:1;
+    background-image:url(../images/pages/fifth_page_bg.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    transition:transform 3.5s .3s;
+    transform: scale(1.5);
+    z-index:0;
+  }
+
+  .fifth_page.visited_page .fifth_page_bg_box .fifth_page_bg_img {
+    transform: scale(1);
+  }
+
+  .fifth_page .fifth_page_content_box {
+    z-index:1;
+    transition:all 5s .3s;
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  .fifth_page.visited_page .fifth_page_content_box {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .fifth_page .fifth_page_content_box h2.fifth_page_title {
+    color:#fff;
+    font-size:5rem;
+    font-weight:bold;
+    text-align: center;
+  }
+
+  .fifth_page .fifth_page_content_box p.fifth_page_subtitle {
+    font-size:2rem;
+    color:#fff;
+    margin-top:40px;
+    text-align: center;
+  }
+
 
   @media all and (max-width:1024px){
     .first_page  .first_page_content_box {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SCEnergy Solution</title>
     <link rel="stylesheet" href="resources/css/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,12 +13,31 @@
     />
     <link rel="stylesheet" href="resources/css/header.css" />
     <link rel="stylesheet" href="resources/css/main_style.css" />
+    <link rel="icon" href="resources/images/header/scenergy_logo_200.png" />
   </head>
   <body>
-    <header>
+    <header id="header" class="">
       <div class="company_brand_box">
         <a class="brand" href="./index.html"></a>
       </div>
+      <ul class="menu_list">
+        <li class="menu_item"><a>회사 소개</a></li>
+        <li class="menu_item"><a>태양광 모듈</a></li>
+        <li class="menu_item">
+          <a
+            >이동형 스마트<br />
+            CCTV</a
+          >
+        </li>
+        <li class="menu_item">
+          <a>PV 시스템<br />컨설팅</a>
+        </li>
+        <li class="menu_item"><a>드론 발전소</br>점검</a></li>
+        <li class="menu_item"><a>태양광<br/>지붕 임대</a></li>
+        <li class="menu_item">
+          <a href="#seventh_page">태양광 모듈<br>기자재 유통</a>
+        </li>
+      </ul>
       <div class="category_box"></div>
       <div class="option_box">
         <svg
@@ -29,8 +48,6 @@
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-          fill="#ffffff"
-          stroke="#ffffff"
         >
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g
@@ -73,7 +90,7 @@
     </header>
     <div class="body_container">
       <!-- 회사소개 페이지 -->
-      <div class="section first_page">
+      <div class="section first_page" id="first_page">
         <div class="first_page_bg">
           <video
             src="resources/videos/first_page_bg2_highqual.mp4"
@@ -89,7 +106,7 @@
         </div>
       </div>
       <!-- 태양광 모듈 -->
-      <div class="section second_page">
+      <div class="section second_page" id="second_page">
         <div class="second_page_content_box">
           <div class="second_page_content_left_box">
             <div class="second_page_left_img_container">
@@ -132,9 +149,9 @@
         </div>
       </div>
       <!-- 이동형 스마트 CCTV -->
-      <div class="section third_page"></div>
+      <div class="section third_page" id="third_page"></div>
       <!-- PV 시스템 컨설팅 -->
-      <div class="section fourth_page">
+      <div class="section fourth_page" id="fourth_page">
         <div class="fourth_page_bg"></div>
         <div class="fourth_page_content_container">
           <div class="fourth_page_content_box">
@@ -142,17 +159,28 @@
             <h2 class="fourth_page_title">PV SYSTEM 컨설팅</h2>
             <p class="fourth_page_subtitle">
               단순한 설치를 넘어, 설계부터 경제적 분석, 인허가 지원, 유지보수
-              계확까지 전 과정을 체계적으로 지원합니다.
+              계획까지 전 과정을 체계적으로 지원합니다.
             </p>
           </div>
         </div>
       </div>
       <!-- 드론 열화상 카메라를 통한 태양광 발전소 점검 -->
-      <div class="section fifth_page"></div>
+      <div class="section fifth_page" id="fifth_page">
+        <div class="fifth_page_bg_box">
+          <div class="fifth_page_bg_img"></div>
+        </div>
+        <div class="fifth_page_content_box">
+          <h2 class="fifth_page_title">드론을 통한 태양광 점검 효율화</h2>
+          <p class="fifth_page_subtitle">
+            고해상도 열화상 이미지를 활용하여, 태양광 패널의 이상 온도를
+            감지하고 현장 접근이 어려운 곳도 손쉽게 점검할 수 있습니다.
+          </p>
+        </div>
+      </div>
       <!-- 태양광 지붕임대 -->
-      <div class="section sixth_page"></div>
+      <div class="section sixth_page" id="sixth_page"></div>
       <!-- 태양광 모듈 기자재 유통 -->
-      <div class="section seventh_page"></div>
+      <div class="section seventh_page" id="seventh_page"></div>
     </div>
     <script src="resources/js/header.js"></script>
     <script src="resources/js/pageControll.js"></script>
