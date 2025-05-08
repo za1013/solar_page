@@ -28,6 +28,7 @@ header {
     padding:10px 100px;
     z-index:100;
     transition:all 1s;
+    overflow:hidden;
 }
 
 header .company_brand_box {
@@ -169,5 +170,11 @@ header.black_theme .option_box ul.lang_list li.lang_item_box {
 
     header .option_box ul.lang_list li.lang_item_box {
         width: 30px;
+    }
+}
+
+@media all and (max-width:768px){
+    header ul.menu_list {
+        display:none;
     }
 }
