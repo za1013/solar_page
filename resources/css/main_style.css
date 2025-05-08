@@ -422,7 +422,7 @@ body {
     background-repeat: no-repeat;
     font-size: 3rem;
     transition: all 2s;
-    transform: scale(1.4);
+    /* transform: scale(1.4); */
   }
 
   .sixth_page .sixth_page_bg_box label:nth-of-type(1) {
