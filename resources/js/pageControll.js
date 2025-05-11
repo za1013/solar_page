@@ -5,8 +5,40 @@ const menu_item_list = document.querySelectorAll(".menu_item");
 let current = 0;
 let isScrolling = false;
 
+let startY = 0;
+let endY = 0;
+
 function easeInOutQuad(t) {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
+function handleSwipe(){
+  const diff = startY - endY;
+  if(Math.abs(diff) < 30) return;
+
+  if(diff > 0 && current < sections.length - 1){
+    // 아래로
+    sections[current].classList.remove("visited_page");
+    current++;
+    sections[current].classList.add("visited_page");
+  }else if(diff < 0 && current > 0){
+    //위로로
+    sections[current].classList.remove("visited_page");
+    current--;
+    sections[current].classList.add("visited_page");
+  }else{
+    return
+  }
+
+  if ((current === 1) | (current === 7)) {
+    header.classList.add("black_theme");
+  } else {
+    header.classList.remove("black_theme");
+  }
+
+  isScrolling = true;
+  const targetOffset = sections[current].offsetTop;
+  smoothScrollTo(targetOffset, 1200);
 }
 
 function smoothScrollTo(targetY, duration = 1000) {
@@ -34,40 +66,24 @@ function smoothScrollTo(targetY, duration = 1000) {
 
 window.addEventListener("touchmove", (e) => {
   e.preventDefault()
-
-  if (isScrolling) return;
-
-  if (e.deltaY > 0 && current < sections.length - 1) {
-    sections[current].classList.remove("visited_page");
-    current++;
-    sections[current].classList.add("visited_page");
-  } else if (e.deltaY < 0 && current > 0) {
-    sections[current].classList.remove("visited_page");
-    current--;
-    sections[current].classList.add("visited_page");
-  } else {
-    return;
-  }
-
-  if ((current === 1) | (current === 7)) {
-    header.classList.add("black_theme");
-  } else {
-    header.classList.remove("black_theme");
-  }
-
-  isScrolling = true;
-  const targetOffset = sections[current].offsetTop;
-  smoothScrollTo(targetOffset, 1200); // 원하는 스크롤 시간 설정
 }, { passive:false})
 
 window.addEventListener("scroll", (e) => {
   e.preventDefault()
 }, { passive:false})
 
+window.addEventListener("touchstart", (e) => {
+  startY = e.touches[0].clientY;
+}, false)
+
+window.addEventListener("touchend", (e) => {
+  endY = e.changedTouches[0].clientY;
+  handleSwipe()
+}, false)
+
 window.addEventListener("wheel", (e) => {
   e.preventDefault()
 
-  console.log("Event Wheel")
   if (isScrolling) return;
 
   if (e.deltaY > 0 && current < sections.length - 1) {
