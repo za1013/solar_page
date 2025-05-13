@@ -12,22 +12,22 @@ function easeInOutQuad(t) {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
 
-function handleSwipe(){
+function handleSwipe() {
   const diff = startY - endY;
-  if(Math.abs(diff) < 30) return;
+  if (Math.abs(diff) < 50) return;
 
-  if(diff > 0 && current < sections.length - 1){
+  if (diff > 0 && current < sections.length - 1) {
     // 아래로
     sections[current].classList.remove("visited_page");
     current++;
     sections[current].classList.add("visited_page");
-  }else if(diff < 0 && current > 0){
+  } else if (diff < 0 && current > 0) {
     //위로로
     sections[current].classList.remove("visited_page");
     current--;
     sections[current].classList.add("visited_page");
-  }else{
-    return
+  } else {
+    return;
   }
 
   if ((current === 1) | (current === 7)) {
@@ -64,50 +64,79 @@ function smoothScrollTo(targetY, duration = 1000) {
   requestAnimationFrame(animateScroll);
 }
 
-window.addEventListener("touchmove", (e) => {
-  e.preventDefault()
-}, { passive:false})
+window.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false }
+);
 
-window.addEventListener("scroll", (e) => {
-  e.preventDefault()
-}, { passive:false})
+window.addEventListener(
+  "scroll",
+  (e) => {
+    e.preventDefault();
+  },
+  { passive: false }
+);
 
-window.addEventListener("touchstart", (e) => {
-  startY = e.touches[0].clientY;
-}, false)
+window.addEventListener(
+  "touchstart",
+  (e) => {
+    startY = e.touches[0].clientY;
+  },
+  false
+);
 
-window.addEventListener("touchend", (e) => {
-  endY = e.changedTouches[0].clientY;
-  handleSwipe()
-}, false)
+window.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+    endY = e.changedTouches[0].clientY;
+  },
+  { passive: false }
+);
 
-window.addEventListener("wheel", (e) => {
-  e.preventDefault()
+window.addEventListener(
+  "touchend",
+  (e) => {
+    e.preventDefault();
+    handleSwipe();
+  },
+  false
+);
 
-  if (isScrolling) return;
+window.addEventListener(
+  "wheel",
+  (e) => {
+    e.preventDefault();
 
-  if (e.deltaY > 0 && current < sections.length - 1) {
-    sections[current].classList.remove("visited_page");
-    current++;
-    sections[current].classList.add("visited_page");
-  } else if (e.deltaY < 0 && current > 0) {
-    sections[current].classList.remove("visited_page");
-    current--;
-    sections[current].classList.add("visited_page");
-  } else {
-    return;
-  }
+    if (isScrolling) return;
 
-  if ((current === 1) | (current === 7)) {
-    header.classList.add("black_theme");
-  } else {
-    header.classList.remove("black_theme");
-  }
+    if (e.deltaY > 0 && current < sections.length - 1) {
+      sections[current].classList.remove("visited_page");
+      current++;
+      sections[current].classList.add("visited_page");
+    } else if (e.deltaY < 0 && current > 0) {
+      sections[current].classList.remove("visited_page");
+      current--;
+      sections[current].classList.add("visited_page");
+    } else {
+      return;
+    }
 
-  isScrolling = true;
-  const targetOffset = sections[current].offsetTop;
-  smoothScrollTo(targetOffset, 1200); // 원하는 스크롤 시간 설정
-}, {passive:false});
+    if ((current === 1) | (current === 7)) {
+      header.classList.add("black_theme");
+    } else {
+      header.classList.remove("black_theme");
+    }
+
+    isScrolling = true;
+    const targetOffset = sections[current].offsetTop;
+    smoothScrollTo(targetOffset, 1200); // 원하는 스크롤 시간 설정
+  },
+  { passive: false }
+);
 
 for (let i = 0; i < menu_item_list.length; i++) {
   let item_link = menu_item_list[i].querySelector("a");
@@ -137,4 +166,4 @@ for (let i = 0; i < menu_item_list.length; i++) {
 // 페이지 로드 시 초기 위치
 window.addEventListener("load", () => {
   window.scrollTo(0, 0);
-})
+});
