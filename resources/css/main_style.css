@@ -668,8 +668,16 @@ body {
     }
 
     .second_page .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
-      font-size:1.5rem;
-      line-height: 1.5rem;
+      font-size:2rem;
+      line-height: 2.5rem;
+    }
+
+    .third_page .third_page_content_box h3.third_page_title {
+    font-size:3.5rem;
+    }
+
+    .third_page .third_page_content_box p.third_page_subtitle {
+      font-size:2rem;
     }
 
     .fourth_page .fourth_page_content_box h2.fourth_page_title {
@@ -677,12 +685,28 @@ body {
     }
   
     .fourth_page .fourth_page_content_box p.fourth_page_subtitle {
-      font-size:1.5rem;
+      font-size:2rem;
     }
 
     .fifth_page .fifth_page_content_box p.fifth_page_subtitle {
       padding-left:50px;
       padding-right:50px;
+    }
+
+    .sixth_page .sixth_page_content_box h3.sixth_page_title {
+    font-size:3.5rem;
+    }
+
+    .sixth_page .sixth_page_content_box p.sixth_page_subtitle {
+      font-size:2rem;
+    }
+
+    .seventh_page .seventh_page_content_box h3.seventh_page_title {
+    font-size:3.5rem;
+    }
+
+    .seventh_page .seventh_page_content_box p.seventh_page_subtitle {
+      font-size:2rem;
     }
 
     .footer_page .footer_page_content_container h2.footer_page_title {
@@ -725,12 +749,20 @@ body {
 
 
     .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
-      font-size:3rem;
+      font-size:2.5rem;
     }
 
     .second_page .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
-      font-size:1.6rem;
-      line-height: 1.6rem;
+      font-size:1.4rem;
+      line-height: 1.4rem;
+    }
+
+    .third_page .third_page_content_box h3.third_page_title {
+    font-size:2.5rem;
+    }
+
+    .third_page .third_page_content_box p.third_page_subtitle {
+      font-size:1.4rem;
     }
 
     .fourth_page .fourth_page_content_container .fourth_page_content_box {
@@ -740,11 +772,11 @@ body {
 
     .fourth_page .fourth_page_content_box h2.fourth_page_title {
       width: 100%;
-      font-size:3rem;
+      font-size:2.5rem;
     }
   
     .fourth_page .fourth_page_content_box p.fourth_page_subtitle {
-      font-size:1.6rem;
+      font-size:1.4rem;
     }
 
     .fifth_page .fifth_page_content_box h2.fifth_page_title {
@@ -755,6 +787,30 @@ body {
       font-size:1.4rem;
       padding-left:20px;
       padding-right:20px;
+    }
+
+    .sixth_page .sixth_page_content_box h3.sixth_page_title {
+    font-size:2.5rem;
+    }
+
+    .sixth_page .sixth_page_content_box p.sixth_page_subtitle {
+      font-size:1.4rem;
+    }
+
+    .sixth_page .sixth_page_bg_box  ul.bg_list {
+      flex-direction: column;
+    }
+
+    .sixth_page .sixth_page_bg_box  ul.bg_list li.bg_item {
+      height: 100%;
+    }
+
+    .seventh_page .seventh_page_content_box h3.seventh_page_title {
+    font-size:2.5rem;
+    }
+
+    .seventh_page .seventh_page_content_box p.seventh_page_subtitle {
+      font-size:1.4rem;
     }
 
     .footer_page .footer_page_content_container .footer_page_content_box {
