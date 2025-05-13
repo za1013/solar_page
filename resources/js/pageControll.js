@@ -92,7 +92,6 @@ window.addEventListener(
   "touchmove",
   (e) => {
     e.preventDefault();
-    endY = e.changedTouches[0].clientY;
   },
   { passive: false }
 );
@@ -101,10 +100,21 @@ window.addEventListener(
   "touchend",
   (e) => {
     e.preventDefault();
+    endY = e.changedTouches[0].clientY;
     handleSwipe();
   },
   false
 );
+
+window.addEventListener("pointerdown", (e) => {
+  startY = e.clientY;
+});
+
+window.addEventListener("pointerup", (e) => {
+  end = e.clientY;
+
+  handleSwipe();
+});
 
 window.addEventListener(
   "wheel",
