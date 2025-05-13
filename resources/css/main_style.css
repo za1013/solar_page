@@ -498,6 +498,7 @@ body {
     filter:blur(12px);
     transition:all 3s;
     letter-spacing: 1em;
+    text-align: center;
   }
 
   .sixth_page.visited_page .sixth_page_content_box {
@@ -557,6 +558,7 @@ body {
   .seventh_page.visited_page .seventh_page_content_box {
     opacity: 1;
     transform:scale(1);
+    text-align: center;
   }
 
   .seventh_page .seventh_page_content_box h3.seventh_page_title {
@@ -678,6 +680,8 @@ body {
 
     .third_page .third_page_content_box p.third_page_subtitle {
       font-size:2rem;
+      padding-left:50px;
+      padding-right:50px;
     }
 
     .fourth_page .fourth_page_content_box h2.fourth_page_title {
@@ -699,6 +703,8 @@ body {
 
     .sixth_page .sixth_page_content_box p.sixth_page_subtitle {
       font-size:2rem;
+      padding-left:50px;
+      padding-right:50px;
     }
 
     .seventh_page .seventh_page_content_box h3.seventh_page_title {
@@ -707,6 +713,8 @@ body {
 
     .seventh_page .seventh_page_content_box p.seventh_page_subtitle {
       font-size:2rem;
+      padding-left:50px;
+      padding-right:50px;
     }
 
     .footer_page .footer_page_content_container h2.footer_page_title {
@@ -763,6 +771,8 @@ body {
 
     .third_page .third_page_content_box p.third_page_subtitle {
       font-size:1.4rem;
+      padding-left:20px;
+      padding-right:20px;
     }
 
     .fourth_page .fourth_page_content_container .fourth_page_content_box {
@@ -777,6 +787,8 @@ body {
   
     .fourth_page .fourth_page_content_box p.fourth_page_subtitle {
       font-size:1.4rem;
+      padding-left:20px;
+      padding-right:20px;
     }
 
     .fifth_page .fifth_page_content_box h2.fifth_page_title {
@@ -795,6 +807,8 @@ body {
 
     .sixth_page .sixth_page_content_box p.sixth_page_subtitle {
       font-size:1.4rem;
+      padding-left:20px;
+      padding-right:20px;
     }
 
     .sixth_page .sixth_page_bg_box  ul.bg_list {
@@ -811,6 +825,8 @@ body {
 
     .seventh_page .seventh_page_content_box p.seventh_page_subtitle {
       font-size:1.4rem;
+      padding-left:20px;
+      padding-right:20px;
     }
 
     .footer_page .footer_page_content_container .footer_page_content_box {
