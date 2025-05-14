@@ -156,7 +156,7 @@ body {
     width: 50%;
     display:flex;
     overflow:hidden;
-    padding:50px;
+    padding:100px 50px;
     box-sizing: border-box;
   }
 
@@ -181,64 +181,108 @@ body {
     transform: scale(1);
   }
 
-  .second_page .second_page_content_box .second_page_content_right_box {
+  .second_page .second_page_content_box .second_page_content_right_container {
     width: 60%;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: start;
     padding:50px;
     box-sizing: border-box;
     position:relative;
+    opacity: 0;
+    transform: translateY(200px);
+    transition:all 2s ease-out;
   }
 
-  .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
+  .second_page.active .second_page_content_box .second_page_content_right_container {
+    opacity: 1;
+    transform:translateY(0);
+  }
+
+  .second_page .second_page_content_box .second_page_content_right_container .second_page_right_icon {
     position:absolute;
     right:50px;
-    bottom:50px;
+    top:50px;
     width: 300px;
     height: 300px;
     opacity: .3;
   }
 
-  .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
+  .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box {
+    display:flex;
+    flex-direction:column;
+    height: 70%;
+  }
+
+  .second_page .second_page_content_box .second_page_content_right_box ul.second_page_item_list {
+    list-style: none;
+    padding: 0;
+    margin-top:20px;
+    flex:1;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+
+  .second_page .second_page_content_box .second_page_content_right_box ul.second_page_item_list li.second_page_item_box {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box .item_bg {
+    flex:1;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(1) .item_bg {
+    background-image:url(../images/part/second_page_sunman.jpg);
+  }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(2) .item_bg {
+    background-image:url(../images/part/second_page_hanwha.jpg);
+  }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(3) .item_bg {
+    background-image:url(../images/part/second_panel_jinco.jpg);
+  }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(4) .item_bg {
+    background-image:url(../images/part/second_page_hyundai.jpg);
+  }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box h5.item_desc {
+    font-size:1.6rem;
+    color:#fff;
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    padding:5px 0px 5px 0px;
+  }
+
+  .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box h2.second_page_title {
     font-size:5rem;
-    /* background: linear-gradient(90deg, #94bdff, #4242ff);
-    background-clip:text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     color:#000;
     text-align: left;
     font-weight: bold;
     display:block;
     width: 100%;
-    transition:all 2s;
-    opacity: 0;
-    transform: translateY(200px);
   }
 
-  .second_page.active .second_page_content_box .second_page_content_right_box h2.second_page_title {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
+  .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box p.second_page_subtitle {
     font-size:2rem;
     font-weight: 400;
     line-height: 2rem;
     margin-top:40px;
     text-align: left;
     width: 100%;
-    transition:all 2s;
-    opacity: 0;
-    transform: translateY(200px);
   }
-
-  .second_page.active .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
 
   .third_page {
     display:flex;
@@ -254,7 +298,7 @@ body {
     top:0;
     left:0;
     z-index:0;
-    background-image:url("../images/pages/third_page_bg.jpg");
+    background-image:url("../images/pages/Sunman_revised.jpg");
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -415,7 +459,7 @@ body {
 
   .fifth_page .fifth_page_content_box {
     z-index:1;
-    transition:all 3.5s .3s;
+    transition:all 3.5s .3s ease-in-out;
     opacity: 0;
     transform: translateX(30%);
   }
@@ -701,15 +745,15 @@ body {
       padding: 30px 20px;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_box {
+    .second_page .second_page_content_box .second_page_content_right_container {
       padding:30px 10px;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_right_icon {
       width: 250px;
       height: 250px;
       right:10px;
-      bottom:30px;
+      top:30px;
     }
 
     .first_page  .first_page_content_box h2.first_page_title {
@@ -720,11 +764,11 @@ body {
       font-size:2rem;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box h2.second_page_title {
       font-size:3.5rem;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box p.second_page_subtitle {
       font-size:2rem;
       line-height: 2.5rem;
     }
@@ -793,14 +837,26 @@ body {
 
     .second_page .second_page_content_box .second_page_content_left_box {
       width: 100%;
-      height: 50%;
+      height: 40%;
       padding: 20px;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_box {
+    .second_page .second_page_content_box .second_page_content_right_container {
       width: 100%;
-      height: 50%;
-      padding:20px;
+      height: 100%;
+      padding: 20px;
+    }
+
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_right_icon {
+      width: 100px;
+      height: 100px;
+      right: 20px;
+      top: 20px;
+    }
+
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box {
+      width: 100%;
+      height: 100%;
     }
 
     .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
@@ -811,11 +867,11 @@ body {
     }
 
 
-    .second_page .second_page_content_box .second_page_content_right_box h2.second_page_title {
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box h2.second_page_title {
       font-size:2.5rem;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_box p.second_page_subtitle {
+    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box p.second_page_subtitle {
       font-size:1.4rem;
       line-height: 1.4rem;
     }
@@ -858,12 +914,15 @@ body {
       font-size:1.4rem;
       padding-left:20px;
       padding-right:20px;
+      margin-top:20px;
     }
 
     .fifth_page .fifth_page_content_box ul.fifth_page_case_list {
       width: 100%;
       padding:0px 20px 0px 20px;
       flex-wrap: wrap;
+      margin-top:10px;
+      margin-bottom:10px;
     }
 
     .fifth_page .fifth_page_content_box ul.fifth_page_case_list li.case_item_box {
@@ -914,4 +973,10 @@ body {
     .footer_page .footer_page_content_container .footer_content_box p {
       font-size:1rem;
     }
+  }
+
+
+
+  #fp-nav.fp-right {
+    right:5px;
   }
