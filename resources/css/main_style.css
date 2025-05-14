@@ -288,7 +288,7 @@ body {
     display:flex;
     position:relative;
     overflow:hidden;
-    justify-content: center;
+    justify-content: end;
   }
 
   .third_page .third_page_bg_box {
@@ -315,13 +315,16 @@ body {
   .third_page .third_page_content_box {
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
+    align-items: center;
     z-index:10;
     color:#fff;
     text-align: center;
     opacity: 0;
     transition:all 3s ease-in-out;
     letter-spacing: -1em;
+    height: 70%;
+    width: 100%;
   }
 
   .third_page.active .third_page_content_box {
@@ -341,6 +344,53 @@ body {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
 
+  .third_page .third_page_content_box ul.third_page_item_list {
+    display:flex;
+    width: 75%;
+    flex:1;
+    margin-top:40px;
+    margin-bottom:40px;
+  }
+
+  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box {
+    width: 25%;
+    padding:10px;
+    display:flex;
+    box-sizing: border-box;
+  }
+
+  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box .item_bg {
+    border-radius: 10px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color:#2F80ED;
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    font-size:2rem;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255,0.4);
+  }
+
+  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(1) .item_bg {
+    background-image:url(../images/part/third_page_cctv.jpg);
+    color:#000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(2) .item_bg {
+    background-image:url(../images/part/third_page_battery.jpg);
+  }
+
+  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(3) .item_bg {
+    background-image:url(../images/part/third_page_solar_panel.jpg);
+  }
+
+  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(4) .item_bg {
+    background-image:url(../images/part/third_page_easymove.jpg);
+  }
 
   .fourth_page {
     display:flex;
@@ -783,6 +833,10 @@ body {
       padding-right:50px;
     }
 
+    .third_page .third_page_content_box ul.third_page_item_list {
+      width: 100%;
+    }
+
     .fourth_page .fourth_page_content_box h2.fourth_page_title {
       font-size:3.5rem;
     }
@@ -876,6 +930,10 @@ body {
       line-height: 1.4rem;
     }
 
+    .third_page .third_page_content_box {
+      height: 70%;
+    }
+
     .third_page .third_page_content_box h3.third_page_title {
     font-size:2.5rem;
     }
@@ -884,6 +942,14 @@ body {
       font-size:1.4rem;
       padding-left:20px;
       padding-right:20px;
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list {
+      flex-wrap: wrap;
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box {
+      width: 50%;
     }
 
     .fourth_page .fourth_page_content_container .fourth_page_content_box {
