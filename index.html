@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="resources/css/fullpage.css" />
     <link rel="stylesheet" href="resources/css/header.css" />
     <link rel="stylesheet" href="resources/css/main_style.css" />
     <link rel="icon" href="resources/images/header/scenergy_logo_200.png" />
@@ -24,22 +25,22 @@
         <a class="brand" href="./index.html"></a>
       </div>
       <ul class="menu_list">
-        <li class="menu_item"><a>회사 소개</a></li>
-        <li class="menu_item"><a>태양광 모듈</a></li>
+        <li class="menu_item"><a href="#first_page">회사 소개</a></li>
+        <li class="menu_item"><a href="#second_page">태양광 모듈</a></li>
         <li class="menu_item">
-          <a
+          <a href="#third_page"
             >이동형 스마트<br />
             CCTV</a
           >
         </li>
         <li class="menu_item">
-          <a>PV 시스템<br />컨설팅</a>
+          <a href="#fourth_page">PV 시스템<br />컨설팅</a>
         </li>
         <li class="menu_item">
-          <a>드론 발전소<br />점검</a>
+          <a href="#fifth_page">드론 발전소<br />점검</a>
         </li>
         <li class="menu_item">
-          <a>태양광<br />지붕 임대</a>
+          <a href="#sixth_page">태양광<br />지붕 임대</a>
         </li>
         <li class="menu_item">
           <a href="#seventh_page">태양광 모듈<br />기자재 유통</a>
@@ -95,14 +96,15 @@
         </ul>
       </div>
     </header>
-    <div class="body_container">
+    <div class="body_container" id="body_container">
       <!-- 회사소개 페이지 -->
-      <div class="section first_page" id="first_page">
+      <div class="section first_page" data-anchor="first_page">
         <div class="first_page_bg">
           <video
-            src="resources/videos/first_page_bg2_highqual.mp4"
+            src="resources/videos/first_page_bg2.mp4"
             muted
             autoplay
+            data-keepplaying
           ></video>
         </div>
         <div class="first_page_content_box">
@@ -113,7 +115,7 @@
         </div>
       </div>
       <!-- 태양광 모듈 -->
-      <div class="section second_page" id="second_page">
+      <div class="section second_page" data-anchor="second_page">
         <div class="second_page_content_box">
           <div class="second_page_content_left_box">
             <div class="second_page_left_img_container">
@@ -156,7 +158,7 @@
         </div>
       </div>
       <!-- 이동형 스마트 CCTV -->
-      <div class="section third_page" id="third_page">
+      <div class="section third_page" data-anchor="third_page">
         <div class="third_page_bg_box"></div>
         <div class="third_page_content_box">
           <h3 class="third_page_title">이동형 스마트 CCTV</h3>
@@ -166,7 +168,7 @@
         </div>
       </div>
       <!-- PV 시스템 컨설팅 -->
-      <div class="section fourth_page" id="fourth_page">
+      <div class="section fourth_page" data-anchor="fourth_page">
         <div class="fourth_page_bg"></div>
         <div class="fourth_page_content_container">
           <div class="fourth_page_content_box">
@@ -180,7 +182,7 @@
         </div>
       </div>
       <!-- 드론 열화상 카메라를 통한 태양광 발전소 점검 -->
-      <div class="section fifth_page" id="fifth_page">
+      <div class="section fifth_page" data-anchor="fifth_page">
         <div class="fifth_page_bg_box">
           <div class="fifth_page_bg_img"></div>
         </div>
@@ -193,7 +195,7 @@
         </div>
       </div>
       <!-- 태양광 지붕임대 -->
-      <div class="section sixth_page" id="sixth_page">
+      <div class="section sixth_page" data-anchor="sixth_page">
         <div class="sixth_page_bg_box">
           <ul class="bg_list">
             <li class="bg_item"></li>
@@ -210,7 +212,7 @@
         </div>
       </div>
       <!-- 태양광 모듈 기자재 유통 -->
-      <div class="section seventh_page" id="seventh_page">
+      <div class="section seventh_page" data-anchor="seventh_page">
         <div class="seventh_page_bg"></div>
         <div class="seventh_page_content_box">
           <h3 class="seventh_page_title">태양광 기자재 유통</h3>
@@ -223,7 +225,7 @@
         </div>
       </div>
       <!-- Footer Page -->
-      <div class="section footer_page" id="footer_page">
+      <div class="section footer_page" data-anchor="footer_page">
         <div class="footer_page_bg_box">
           <svg
             id="_x32_"
@@ -396,6 +398,7 @@
         </div>
       </div>
     </div>
+    <script src="resources/js/fullpage.js"></script>
     <script src="resources/js/header.js"></script>
     <script src="resources/js/pageControll.js"></script>
   </body>
