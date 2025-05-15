@@ -27,7 +27,7 @@ header {
     box-sizing: border-box;
     padding:10px 100px;
     z-index:100;
-    transition:all 1s;
+    transition:all .3s;
 }
 
 header .company_brand_box {
