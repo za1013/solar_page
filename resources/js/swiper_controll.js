@@ -12,7 +12,7 @@ const swiper = new Swiper(".main_swiper", {
   },
   on: {
     slideChange: () => {
-      if (swiper.activeIndex === 1 || swiper.activeIndex === 7) {
+      if (swiper.activeIndex === 6) {
         header.classList.add("black_theme");
         pagination.classList.add("black_theme");
       } else {

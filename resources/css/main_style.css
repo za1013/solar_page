@@ -150,159 +150,13 @@
 
   .second_page {
     display:flex;
-    flex-direction:column;
-    justify-content: center;
-  }
-
-  .second_page .second_page_content_box {
-    width: 100%;
-    height: 100%;
-    display:flex;
-    flex-direction: row;
-    box-sizing: border-box;
-  }
-
-  .second_page .second_page_content_box .second_page_content_left_box {
-    width: 50%;
-    display:flex;
-    overflow:hidden;
-    padding:100px 50px;
-    box-sizing: border-box;
-  }
-
-  .second_page .second_page_content_box .second_page_content_left_box .second_page_left_img_container {
-    flex:1;
-    display:flex;
-    overflow:hidden;
-    border-radius: 10px;
-  }
-
-  .second_page .second_page_content_box .second_page_content_left_box .second_page_left_img_box {
-    flex:1;
-    background-image:url(../images/pages/second_page_bg.jpg);
-    background-position:center;
-    background-size:cover;
-    border-radius: 10px;
-    transition:all 3.5s;
-    transform: scale(1.5);
-  }
-
-  .second_page.swiper-slide-active .second_page_content_box .second_page_content_left_box .second_page_left_img_box {
-    transform: scale(1);
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_container {
-    width: 60%;
-    display:flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: start;
-    padding:50px;
-    box-sizing: border-box;
-    position:relative;
-    opacity: 0;
-    transform: translateY(200px);
-    transition:all 2s ease-out;
-  }
-
-  .second_page.swiper-slide-active .second_page_content_box .second_page_content_right_container {
-    opacity: 1;
-    transform:translateY(0);
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_container .second_page_right_icon {
-    position:absolute;
-    right:50px;
-    top:50px;
-    width: 300px;
-    height: 300px;
-    opacity: .3;
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box {
-    display:flex;
-    flex-direction:column;
-    height: 70%;
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_box ul.second_page_item_list {
-    list-style: none;
-    padding: 0;
-    margin-top:20px;
-    flex:1;
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_box ul.second_page_item_list li.second_page_item_box {
-    width: 50%;
-    padding: 10px;
-    box-sizing: border-box;
-    display:flex;
-    flex-direction:column;
-  }
-
-  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box .item_bg {
-    flex:1;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size:cover;
-  }
-
-  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(1) .item_bg {
-    background-image:url(../images/part/second_page_sunman.jpg);
-  }
-
-  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(2) .item_bg {
-    background-image:url(../images/part/second_page_hanwha.jpg);
-  }
-
-  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(3) .item_bg {
-    background-image:url(../images/part/second_panel_jinco.jpg);
-  }
-
-  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(4) .item_bg {
-    background-image:url(../images/part/second_page_hyundai.jpg);
-  }
-
-  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box h5.item_desc {
-    font-size:1.6rem;
-    color:#fff;
-    background: #56CCF2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    text-align: center;
-    padding:5px 0px 5px 0px;
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box h2.second_page_title {
-    font-size:5rem;
-    color:#000;
-    text-align: left;
-    font-weight: bold;
-    display:block;
-    width: 100%;
-  }
-
-  .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box p.second_page_subtitle {
-    font-size:2rem;
-    font-weight: 400;
-    line-height: 2rem;
-    margin-top:40px;
-    text-align: left;
-    width: 100%;
-  }
-
-  .third_page {
-    display:flex;
     flex-direction: column;
     position:relative;
     overflow:hidden;
     justify-content: end;
   }
 
-  .third_page .third_page_bg_box {
+  .second_page .second_page_bg_box {
     position:absolute;
     width: 100%;
     height: 100%;
@@ -315,15 +169,15 @@
     background-size:cover;
     filter:brightness(1.15) contrast(1.1) sepia(0.05) blur(10px);
     transform: scale(1.5);
-    transition:all 3s;
-  }
+    transition:all 2s;
+  } 
 
-  .third_page.swiper-slide-active .third_page_bg_box {
+  .second_page.swiper-slide-active .second_page_bg_box {
     filter:brightness(1.15) contrast(1.1) sepia(0.05) blur(0);
     transform: scale(1);
   }
 
-  .third_page .third_page_content_box {
+  .second_page .second_page_content_box {
     display:flex;
     flex-direction: column;
     justify-content: end;
@@ -332,30 +186,30 @@
     color:#fff;
     text-align: center;
     opacity: 0;
-    transition:all 3s ease-in-out;
+    transition:all 2s ease-in-out;
     letter-spacing: -1em;
-    height: 70%;
+    height: 60%;
     width: 100%;
   }
 
-  .third_page.swiper-slide-active .third_page_content_box {
+  .second_page.swiper-slide-active .second_page_content_box {
     opacity: 1;
     letter-spacing: normal;
   }
 
-  .third_page .third_page_content_box h3.third_page_title {
+  .second_page .second_page_content_box h3.second_page_title {
     font-size:5rem;
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
 
-  .third_page .third_page_content_box p.third_page_subtitle {
+  .second_page .second_page_content_box p.second_page_subtitle {
     font-size:2.5rem;
     margin-top:40px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list {
+  .second_page .second_page_content_box ul.second_page_item_list {
     display:flex;
     width: 75%;
     flex:1;
@@ -363,14 +217,14 @@
     margin-bottom:40px;
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box {
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box {
     width: 25%;
     padding:10px;
     display:flex;
     box-sizing: border-box;
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box .item_bg {
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box .item_bg {
     border-radius: 10px;
     background-position:center;
     background-repeat: no-repeat;
@@ -379,29 +233,144 @@
     flex:1;
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-align:center;
     font-size:2rem;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255,0.4);
+    color:#fff;
+      text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(1) .item_bg {
-    background-image:url(../images/part/third_page_cctv2.jpg);
-    color:#000;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(1) .item_bg {
+    background-image:url(../images/part/second_page_cctv.jpg);
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(2) .item_bg {
-    background-image:url(../images/part/third_page_battery.jpg);
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(2) .item_bg {
+    background-image:url(../images/part/second_page_battery.jpg);
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(3) .item_bg {
-    background-image:url(../images/part/third_page_solar_panel.jpg);
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(3) .item_bg {
+    background-image:url(../images/part/second_page_solar_panel.jpg);
   }
 
-  .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(4) .item_bg {
-    background-image:url(../images/part/third_page_easymove.jpg);
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box:nth-child(4) .item_bg {
+    background-image:url(../images/part/second_page_easymove.jpg);
   }
+
+  .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box .item_bg h5.item_desc {
+    padding-top:10px;
+  }
+
+  .third_page {
+    display:flex;
+    flex-direction:column;
+    justify-content: end;
+    position:relative;
+    overflow: hidden;
+  }
+
+  .third_page .third_page_bg {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-image:url(../images/pages/third_page_bg.jpg);
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transition:all 2s ease-out;
+    transform: scale(1.3);
+  }
+
+  .third_page.swiper-slide-active .third_page_bg {
+    transform:scale(1);
+  }
+
+    .third_page .third_page_content_box {
+      width: 100%;
+      height: 60%;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      z-index:10;
+      transition:all 2s ease-out;
+      opacity: 0;
+    }
+
+    .third_page.swiper-slide-active .third_page_content_box {
+      opacity: 1;
+    }
+
+    .third_page .third_page_content_box h3.third_page_title {
+      font-size:5rem;
+      color:#fff;
+      font-weight:bold;
+    }
+
+    .third_page .third_page_content_box p.third_page_subtitle {
+      color:#fff;
+      font-size:2.5rem;
+      margin-top:40px;
+      text-align:center;
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list {
+      display:flex;
+      width: 75%;
+      flex:1;
+      margin-top:40px;
+      margin-bottom:40px;
+      flex-direction: row;
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box {
+      width: 25%;
+      box-sizing: border-box;
+      padding: 10px;
+      display:flex;
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box .item_bg {
+      background-position:center;
+      background-size:cover;
+      background-repeat: no-repeat;
+      flex:1;
+      border-radius: 10px;
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(1) .item_bg {
+      background-image:url(../images/part/third_page_solarPanel.jpg);
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(2) .item_bg {
+      background-image:url(../images/part/third_page_inverter.jpg);
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(3) .item_bg {
+      background-image:url(../images/part/third_page_powerDistributionPanel.jpg);
+    }
+
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box:nth-child(4) .item_bg {
+      background-image:url(../images/part/third_page_solarPanelStructure.jpg);
+    }
+    
+    .third_page .third_page_content_box ul.third_page_item_list li.third_page_item_box .item_bg h5.item_desc {
+      font-size:2rem;
+      font-weight:bold;
+      text-align: center;
+      padding-top:10px;
+      color:#fff;
+      text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+    }
 
   .fourth_page {
     display:flex;
@@ -518,7 +487,12 @@
 
   .fourth_page .fourth_page_content_box ul.fourth_page_item_list li.fourth_page_item_box .item_bg h5.item_desc {
     font-size:2rem;
-    color:#000;
+    color:#fff;
+      text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
     text-align:center;
     padding-top:10px;
   }
@@ -586,7 +560,8 @@
   }
 
   .fifth_page .fifth_page_content_box p.fifth_page_subtitle {
-    font-size:2.5rem;
+    width: 75%;
+    font-size:2.2rem;
     color:#fff;
     margin-top:40px;
     text-align: center;
@@ -595,11 +570,12 @@
 
   .fifth_page .fifth_page_content_box ul.fifth_page_case_list {
     list-style: none;
-    width: 70%;
+    width: 75%;
     flex:1;
     margin-top:40px;
     margin-bottom:40px;
     display:flex;
+    box-sizing:border-box;
   }
 
   .fifth_page .fifth_page_content_box ul.fifth_page_case_list li.case_item_box {
@@ -843,21 +819,6 @@
       padding:0px 30px 0px 30px;
     }
 
-    .second_page .second_page_content_box .second_page_content_left_box {
-      padding: 30px 20px;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container {
-      padding:30px 10px;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_right_icon {
-      width: 250px;
-      height: 250px;
-      right:10px;
-      top:30px;
-    }
-
     .first_page  .first_page_content_box h2.first_page_title {
       font-size:5rem;
     }
@@ -866,20 +827,25 @@
       font-size:2rem;
     }
 
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box h2.second_page_title {
-      font-size:3.5rem;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box p.second_page_subtitle {
-      font-size:2rem;
-      line-height: 2.5rem;
-    }
-
-    .third_page .third_page_content_box h3.third_page_title {
+    .second_page .second_page_content_box h3.second_page_title {
     font-size:3.5rem;
     }
 
-    .third_page .third_page_content_box p.third_page_subtitle {
+    .second_page .second_page_content_box p.second_page_subtitle {
+      font-size:2rem;
+      padding-left:50px;
+      padding-right:50px;
+    }
+
+    .second_page .second_page_content_box ul.second_page_item_list {
+      width: 100%;
+    }
+
+    .third_page .third_page_content_box h3.third_page_title {
+      font-size:3.5rem;
+    }
+
+    .third_page .thrid_page_content_box p.third_page_subtitle {
       font-size:2rem;
       padding-left:50px;
       padding-right:50px;
@@ -901,9 +867,18 @@
       width: 100%;
     }
 
+    .fifth_page .fifth_page_content_box h2.fifth_page_title {
+      font-size:3.5rem;
+    }
+
     .fifth_page .fifth_page_content_box p.fifth_page_subtitle {
       padding-left:50px;
       padding-right:50px;
+      font-size:2rem;
+    }
+
+    .fifth_page .fifth_page_content_box ul.fifth_page_case_list {
+      width: 100%;
     }
 
     .sixth_page .sixth_page_content_box h3.sixth_page_title {
@@ -942,56 +917,30 @@
     }
 
     .second_page .second_page_content_box {
-      flex-direction: column;
-    }
-
-    .second_page .second_page_content_box .second_page_content_left_box {
-      width: 100%;
-      height: 40%;
-      padding: 20px;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container {
-      width: 100%;
-      height: 100%;
-      padding: 20px;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_right_icon {
-      width: 100px;
-      height: 100px;
-      right: 20px;
-      top: 20px;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box {
-      width: 100%;
-      height: 100%;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_box .second_page_right_icon {
-      width: 200px;
-      height: 200px;
-      right:10px;
-      bottom:10px;
-    }
-
-
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box h2.second_page_title {
-      font-size:2.5rem;
-    }
-
-    .second_page .second_page_content_box .second_page_content_right_container .second_page_content_right_box p.second_page_subtitle {
-      font-size:1.4rem;
-      line-height: 1.4rem;
-    }
-
-    .third_page .third_page_content_box {
       height: 70%;
     }
 
-    .third_page .third_page_content_box h3.third_page_title {
+    .second_page .second_page_content_box h3.second_page_title {
     font-size:2.5rem;
+    }
+
+    .second_page .second_page_content_box p.second_page_subtitle {
+      font-size:1.4rem;
+      padding-left:20px;
+      padding-right:20px;
+    }
+
+    .second_page .second_page_content_box ul.second_page_item_list {
+      flex-wrap: wrap;
+    }
+
+    .second_page .second_page_content_box ul.second_page_item_list li.second_page_item_box {
+      width: 50%;
+    }
+
+    
+    .third_page .third_page_content_box h3.third_page_title {
+      font-size:2.5rem;
     }
 
     .third_page .third_page_content_box p.third_page_subtitle {
@@ -1001,6 +950,7 @@
     }
 
     .third_page .third_page_content_box ul.third_page_item_list {
+      width: 100%;
       flex-wrap: wrap;
     }
 
@@ -1037,7 +987,6 @@
 
     .fourth_page .fourth_page_content_box ul.fourth_page_item_list li.fourth_page_item_box .item_bg h5.item_desc {
       padding-top: 5px;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     }
 
     .fifth_page .fifth_page_content_box {
