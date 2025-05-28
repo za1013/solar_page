@@ -205,8 +205,16 @@
 
   .second_page .second_page_content_box p.second_page_subtitle {
     font-size:2.5rem;
+    line-height:3rem;
     margin-top:40px;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    text-align:left;
+  }
+  
+  .second_page .second_page_content_box p.second_page_subtitle svg {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
   }
 
   .second_page .second_page_content_box ul.second_page_item_list {
@@ -833,8 +841,15 @@
 
     .second_page .second_page_content_box p.second_page_subtitle {
       font-size:2rem;
+      line-height:2.5rem;
       padding-left:50px;
       padding-right:50px;
+    }
+
+    .second_page .second_page_content_box p.second_page_subtitle svg {
+      width: 2rem;
+      height: 2rem;
+      line-height:2.5rem;
     }
 
     .second_page .second_page_content_box ul.second_page_item_list {
@@ -926,8 +941,15 @@
 
     .second_page .second_page_content_box p.second_page_subtitle {
       font-size:1.4rem;
+      line-height: 1.6rem;
       padding-left:20px;
       padding-right:20px;
+    }
+
+    .second_page .second_page_content_box p.second_page_subtitle svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      line-height:1.6rem;
     }
 
     .second_page .second_page_content_box ul.second_page_item_list {
